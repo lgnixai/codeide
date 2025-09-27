@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build:frontend": "npm --prefix frontend run build",
+    "preview:frontend": "npm --prefix frontend run preview",
+    "dev:server": "cd server && go run ./...",
+    "dev": "concurrently -k \"npm:dev:server\" \"npm:dev:frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
+
